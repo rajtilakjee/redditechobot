@@ -39,7 +39,7 @@ posts = subreddit.search(post_title, limit=1)
 for post in posts:
     post_id = post.id
 
-comment_text = 'Gub moin Nimmo, iKR, Godfi, Cucu, Harpu, Mochi-san, Moody Barbie, Entcune, dariya, successful strain, biryani man, SkyDriver, Tony Gunk, Nanga Lafanga, motachondria, InjuryArtistic, RiyalCounter, greatest idiot, aadesh, YoursTrullii, Videshikaua, deep pudding, distressed doc, bossyblueberry, clarku, one punch man, nadaan parinda, prawns no more, chulbul pandey, 10xP, guy who talks, luna crest, brotherman rogue, kai_1100, cow_word, uppsak, tempu, sCams, its rain, itoohaveadream, ganymede, pristine rain, RAVENGRIMOIRE, jupiiiiiiii, bingua, cautious reading, prof dhokla, bear energy, sleepylazydumb, awwhoneyy, pikuuu_, cantthinkofaname231, chotuchaiwala, emty, lifeendon, zenith, greedyenthu, p_W_n. Ghyanks!'
+comment_text = 'Gub moin Nimmo, iKR, Godfi, Cucu, Harpu, Mochi-san, Moody Barbie, Entcune, dariya, successful strain, biryani man, SkyDriver, Tony Gunk, Nanga Lafanga, motachondria, InjuryArtistic, RiyalCounter, greatest idiot, aadesh, YoursTrullii, Videshikaua, deep pudding, distressed doc, bossyblueberry, clarku, one punch man, nadaan parinda, prawns no more, chulbul pandey, 10xP, guy who talks, luna crest, brotherman rogue, kai_1100, cow_word, uppsak, tempu, sCams, its rain, itoohaveadream, ganymede, pristine rain, RAVENGRIMOIRE, jupiiiiiiii, bingua, cautious reading, prof dhokla, bear energy, sleepylazydumb, awwhoneyy, pikuuu_, cantthinkofaname231, chotuchaiwala, emty, lifeendon, zenith, greedyenthu, p_W_n, cokegeek, unburntsalemwitch. Ghyanks!'
 
 # Post the comment
 submission = reddit.submission(id=post_id)
