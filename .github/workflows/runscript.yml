@@ -3,8 +3,12 @@ name: Run Script Daily
 on:
   schedule:
     - cron: '30 3 * * *' # Schedule the workflow to run at 9 AM IST every day (9:00 AM IST is 3:30 AM UTC)
-  # Add the workflow_dispatch event to allow manual runs
   workflow_dispatch:
+    inputs:
+      manual_run:
+        description: 'Run the script manually'
+        required: false
+        default: 'false'
   
 jobs:
   run-script:
