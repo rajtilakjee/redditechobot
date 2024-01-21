@@ -1,0 +1,38 @@
+name: Run Script Daily
+
+on:
+  schedule:
+    - cron: '30 16 * * *'
+  workflow_dispatch:
+    inputs:
+      manual_run:
+        description: 'Run the script manually'
+        required: false
+        default: 'false'
+  
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: 3.x
+
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+
+    - name: Run Python script with random delay
+      run: |
+        sleep $(( ( RANDOM % 60 ) + 1 ))m  # Sleep for a random number of minutes (1-60)
+        python src/redditpromoter.py
+      env:
+        CLIENT_ID: ${{ secrets.CLIENT_ID }}
+        CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+        USER_AGENT: ${{ secrets.USER_AGENT }}
+        REDDIT_USERNAME: ${{ secrets.REDDIT_USERNAME }}
+        REDDIT_PASSWORD: ${{ secrets.REDDIT_PASSWORD }}
