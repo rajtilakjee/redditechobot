@@ -19,7 +19,7 @@ ist_datetime = current_utc_datetime.astimezone(ist)
 today_date = ist_datetime.strftime("%d %B, %Y")
 
 # Get the title of the post
-post_title = ("Late Night Random Discussion Thread - " + yesterday_date)
+post_title = ("Late Night Random Discussion Thread - " + today_date)
 
 reddit = praw.Reddit(
         client_id=client_id,
